@@ -24,6 +24,7 @@ class PostList extends React.Component {
       );
     });
   }
+
   render() {
     return <div className="ui relaxed divided list">{this.renderList()}</div>;
   }
@@ -33,4 +34,7 @@ const mapStateToProps = state => {
   return { posts: state.posts };
 };
 
-export default connect(mapStateToProps, { fetchPostsAndUsers })(PostList);
+export default connect(
+  mapStateToProps,
+  { fetchPostsAndUsers }
+)(PostList);
